@@ -1,0 +1,169 @@
+@import url(font.css);
+
+*{
+	padding: 0;
+	margin: 0;
+  -moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+html,body{
+	height: 100%;
+	width: 100%;
+	font-size: 100%;
+	line-height: 1;
+	font-size: 22px;
+	-ms-text-size-adjust: 100%;
+	-moz-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+  background: url(../img/bg.webp) center center no-repeat;
+  background-size: cover;
+}
+
+.main {
+  width: 46rem;
+  margin: 2.5rem auto 0;
+}
+
+.title {
+  margin-bottom: .5rem;
+  color: #055D54;
+}
+
+.subtitle {
+  margin-bottom: 1rem;
+  font-size: .7rem;
+  color: #055D54;
+}
+
+.hint {
+  margin-bottom: 1.3rem;
+  font-size: .7rem;
+  color: #333;
+}
+
+.output {
+  backdrop-filter: blur(5px);
+  min-height: 6.8rem;
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 2rem;
+  font-family: inherit;
+  font-size: .9rem;
+  border: 1px solid #dddddd8a;
+  border-radius: .5rem;
+  outline: none;
+  background-color: rgba(255, 255, 255, .2);
+}
+
+.output::placeholder {
+  font-size: .8rem;
+}
+
+.output:focus {
+  box-shadow: 0 0 3pt 2pt #dddddd8a;
+}
+
+.keyboard {
+  display: grid;
+  grid-row-gap: .5rem;
+  padding: 1rem;
+  user-select: none;
+  border-radius: .5rem;
+  background-color: rgba(5, 93, 84, .4);
+  backdrop-filter: blur(8px);
+}
+
+.keyboard__row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.keyboard__key {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  text-align: center;
+  font-weight: 300;
+  cursor: pointer;
+  border-radius: 1.5rem;
+  background-color: #A1BEC2;
+  transition: .2s;
+}
+
+.keyboard__key:hover {
+  background-color: #d2b5b5;
+}
+
+.keyboard__key.active {
+  background-color: rosybrown;
+}
+
+.letter {
+  color: #fff;
+  transition: .3s;
+}
+
+.sub {
+  font-size: .6rem;
+  font-weight: 400;
+  color: #5e656d;
+  transition: .2s;
+}
+
+.sub-active:not(:empty) {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+  transform: translateY(13px);
+}
+
+.sub-active:not(:empty) ~ .letter.sub-inactive {
+  font-size: .6rem;
+  color: #5e656d;
+  transform: translateY(-22px);
+}
+
+[data-fn="true"] {
+  font-size: .8rem;
+}
+
+[data-code="Backspace"] {
+  width: 5.5rem;
+}
+
+[data-code="Tab"] {
+  width: 3.5rem;
+}
+
+[data-code="Delete"] {
+  width: 4rem;
+}
+
+[data-code="CapsLock"] {
+  width: 4rem;
+}
+
+[data-code="Enter"] {
+  width: 5rem;
+}
+
+[data-code="ShiftLeft"] {
+  width: 5.5rem;
+}
+
+[data-code="ControlLeft"] {
+  width: 3rem;
+}
+
+[data-code="Space"] {
+  width: 20rem;
+}
